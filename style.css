@@ -1,0 +1,556 @@
+/* Overall Styling for the website */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@300;0,400;500;600&display=swap');
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;;
+    color: white;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(31, 31, 31);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+p{
+    color: rgb(228, 202, 202)
+}
+
+a, .btn{
+    transition:  all 300ms ease;
+}
+
+/* Navigation */
+
+nav, .nav-links{
+    display: flex;
+}
+
+nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+
+.nav-links{
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+a:hover{
+    color: green;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+.logo{
+    color: rgb(255, 244, 244);
+    font-size: 2.1rem;
+}
+
+.logo:hover{
+    cursor: default;
+}
+
+/* Menu */
+#hamburger-nav{
+    display: none;
+}
+
+.hamburger-menu{
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.menuLinks{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.menuLinks a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.menuLinks li{
+    list-style: none;
+}
+
+.menuLinks.open{
+    max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child{
+    transform: rotate(45deg) translate(10px,5px);
+}
+.hamburger-icon.open span:nth-child(2){
+    opacity: 0;
+}
+.hamburger-icon.open span:last-child{
+    transform: rotate(-45deg) translate(10px,-5px);
+}
+
+.hamburger-icon span:first-child{
+    transform: none;
+}
+.hamburger-icon span:first-child{
+    opacity: 1;
+}
+.hamburger-icon span:first-child{
+    transform: none;
+}
+
+/* Profile Container */
+
+section{
+    padding-top: 13vh;
+    height: 97vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container{
+    display: flex;
+}
+
+#profile{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 70vh;
+}
+
+.section_pic-container{
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.section_text{
+    align-self: center;
+    text-align: center;
+}
+
+.section_text p{
+    font-weight: 600;
+}
+
+.section_text_p1{
+    text-align: center;
+}
+.section_text_p2{
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+.title{
+    font-size: 3rem;
+    text-align: center;
+
+}
+
+#social-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    gap: 1rem;
+}
+
+/* Icons */
+.icon{
+    cursor: pointer;
+    height: 2rem;
+    margin-top: 1rem;
+}
+
+/* Buttons */
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 1.3rem;
+}
+.btn{
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+.btn-color1, .btn-color2{
+    border: rgb(53, 53, 53);
+}
+.btn-color1:hover, .btn-color2:hover{
+   cursor: pointer;
+}
+.btn-color1, .btn-color2:hover{
+   background-color: rgb(53, 53, 53);
+   color: white;
+}
+
+.btn-color1:hover{
+    background: rgb(0, 0, 0);
+}
+.btn-color2{
+    background: none;
+}
+.btn-color2:hover{
+    border: rgb(255, 255, 255) 0.1rem solid;;
+}
+.btn-container{
+    gap: 1rem;
+}
+
+/* About section */
+
+/* ABOUT SECTION LAYOUT */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+/* IMAGE STYLING */
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    width: 250px;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* EXPERIENCE & EDUCATION CARDS */
+.about-content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-cards {
+    display: flex;
+    gap: 2.5rem; 
+    justify-content: center;
+    align-items: center; 
+    margin-top: -20px;
+}
+
+.card {
+    background: white;
+    color: black;
+    padding: 20px 40px;
+    border-radius: 15px;
+    width: 350px;
+    height: auto;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card img {
+    display: block;
+    margin: 0 auto 10px;
+    filter: brightness(0);
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: black;
+}
+.card p {
+    color: rgb(50, 50, 50); 
+    margin-top: 8px;
+    line-height: 1.4;
+    font-size: 16px;
+}
+
+/* DESCRIPTION BELOW CARDS */
+.about-description {
+    max-width: 600px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    margin-top: 10px;
+}
+
+/* Arrow section */
+.arrow {
+    position: absolute;
+    bottom: 20px; /* Pushes it to the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Centers it */
+    width: 40px; /* Adjusts the arrow size */
+    height: auto;
+    cursor: pointer;
+    animation: bounce 1.5s infinite; /* Optional bounce animation */
+}
+
+/* Add a bounce effect */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+#about {
+    position: relative; /* This allows the arrow to be positioned inside */
+    padding-bottom: 60px; /* Prevents overlap */
+}
+
+/* Experience Section */
+
+#experience {
+    position: relative;
+    text-align: center;
+}
+
+/* Skills Box */
+.skills-box {
+    background: rgba(255, 255, 255, 0.1); /* Light transparent effect */
+    padding: 2rem;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 900px;
+    margin: 2rem auto; /* Added margin to create space */
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+/* Skills Grid Layout */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1.5rem; /* Increase spacing between skills */
+    padding: 1.5rem;
+}
+
+
+/* Individual Skill Item */
+article {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    width: 200px;
+    justify-content: flex-start;
+}
+
+/* Skill Icons */
+article .icon {
+    width: 24px; 
+    height: auto;
+    margin-right: 8px; 
+    filter: brightness(100%); 
+}
+
+
+/* Adjust Skill Text */
+article div h3 {
+    font-size: 1.2rem;
+}
+
+article div p {
+    font-size: 0.9rem;
+    color: rgb(190, 190, 190);
+}
+
+ /* Project Section */
+ .projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, auto); /* Ensures auto height */
+    gap: 40px; /* Increase spacing between projects */
+    padding: 30px 0; /* Adds spacing at top and bottom */
+}
+
+
+.project-card {
+    background: #fff;
+    padding: 5px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Equal spacing inside */
+    align-items: center;
+    height: 100%; /* Ensure uniform height */
+    gap: 2rem;
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px; /* Fixed height for images */
+    object-fit: cover; /* Ensures images scale properly */
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    color: black;/* Reduce space between title and description */
+}
+
+.project-card p {
+    margin: 0;
+    color: black;
+     /* Reduce space below description */
+}
+
+.project-card button {
+    margin-top: 0px; /* Adjust button spacing */
+}
+
+#projects {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.section__text__p1 {
+    font-size: 18px;
+    text-align: center; /* Ensure proper alignment */
+    display: block;
+    margin-bottom: 5px;
+}
+
+h1.title {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+/* 🔹 Center Align Contact Section */
+#contact {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* 🔹 Style Contact Container */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.contact-container:p{
+    color: black;
+}
+/* 🔹 Contact Card Box */
+.contact-card {
+    display: flex;
+    background: rgb(31, 31, 31);
+    padding: 15px 30px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    gap: 30px;
+}
+
+/*  Each Contact Item */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: black;
+}
+
+
+/* Footer Section */
+footer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* Footer Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: rgb(228, 202, 202);
+    font-weight: 500;
+}
+
+/* 🔹 Footer Copyright */
+.footer-text {
+    font-size: 14px;
+    color: gray;
+    margin-top: 10px;
+}
+
+
+
+
+
+
